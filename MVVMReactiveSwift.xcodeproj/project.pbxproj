@@ -8,12 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		F647ED1C227250DF00769225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED1B227250DF00769225 /* AppDelegate.swift */; };
-		F647ED1E227250DF00769225 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED1D227250DF00769225 /* ViewController.swift */; };
-		F647ED21227250DF00769225 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F647ED1F227250DF00769225 /* Main.storyboard */; };
 		F647ED23227250E000769225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F647ED22227250E000769225 /* Assets.xcassets */; };
 		F647ED26227250E000769225 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F647ED24227250E000769225 /* LaunchScreen.storyboard */; };
 		F647ED31227250E000769225 /* MVVMReactiveSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED30227250E000769225 /* MVVMReactiveSwiftTests.swift */; };
 		F647ED3C227250E000769225 /* MVVMReactiveSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED3B227250E000769225 /* MVVMReactiveSwiftUITests.swift */; };
+		F647ED4B2272535A00769225 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F647ED4A2272535A00769225 /* ReactiveSwift.framework */; };
+		F647ED60227254C700769225 /* ImageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED5F227254C700769225 /* ImageListViewModel.swift */; };
+		F647ED62227254DD00769225 /* ImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED61227254DD00769225 /* ImageDetailViewModel.swift */; };
+		F647ED672272559C00769225 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED652272559C00769225 /* ImageDetailViewController.swift */; };
+		F647ED682272559C00769225 /* ImageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F647ED662272559C00769225 /* ImageDetailViewController.xib */; };
+		F647ED6B227255AE00769225 /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED69227255AE00769225 /* ImageListViewController.swift */; };
+		F647ED6C227255AE00769225 /* ImageListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F647ED6A227255AE00769225 /* ImageListViewController.xib */; };
+		F647ED70227257BD00769225 /* ViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED6F227257BD00769225 /* ViewControllerProtocol.swift */; };
+		F647ED72227257E300769225 /* ViewControllerContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED71227257E300769225 /* ViewControllerContext.swift */; };
+		F647ED742272583300769225 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED732272583300769225 /* ServiceProtocol.swift */; };
+		F647ED762272589700769225 /* PixelBayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED752272589700769225 /* PixelBayService.swift */; };
+		F647ED782272593800769225 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED772272593800769225 /* ViewController.swift */; };
+		F647ED7A22725A5900769225 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED7922725A5900769225 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +47,6 @@
 /* Begin PBXFileReference section */
 		F647ED18227250DF00769225 /* MVVMReactiveSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMReactiveSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F647ED1B227250DF00769225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F647ED1D227250DF00769225 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F647ED20227250DF00769225 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F647ED22227250E000769225 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F647ED25227250E000769225 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F647ED27227250E000769225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +56,19 @@
 		F647ED37227250E000769225 /* MVVMReactiveSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMReactiveSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F647ED3B227250E000769225 /* MVVMReactiveSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMReactiveSwiftUITests.swift; sourceTree = "<group>"; };
 		F647ED3D227250E000769225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F647ED4A2272535A00769225 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		F647ED5F227254C700769225 /* ImageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewModel.swift; sourceTree = "<group>"; };
+		F647ED61227254DD00769225 /* ImageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModel.swift; sourceTree = "<group>"; };
+		F647ED652272559C00769225 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
+		F647ED662272559C00769225 /* ImageDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDetailViewController.xib; sourceTree = "<group>"; };
+		F647ED69227255AE00769225 /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
+		F647ED6A227255AE00769225 /* ImageListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageListViewController.xib; sourceTree = "<group>"; };
+		F647ED6F227257BD00769225 /* ViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProtocol.swift; sourceTree = "<group>"; };
+		F647ED71227257E300769225 /* ViewControllerContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerContext.swift; sourceTree = "<group>"; };
+		F647ED732272583300769225 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		F647ED752272589700769225 /* PixelBayService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelBayService.swift; sourceTree = "<group>"; };
+		F647ED772272593800769225 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F647ED7922725A5900769225 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F647ED4B2272535A00769225 /* ReactiveSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +104,7 @@
 				F647ED2F227250E000769225 /* MVVMReactiveSwiftTests */,
 				F647ED3A227250E000769225 /* MVVMReactiveSwiftUITests */,
 				F647ED19227250DF00769225 /* Products */,
+				F647ED492272535A00769225 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,8 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				F647ED1B227250DF00769225 /* AppDelegate.swift */,
-				F647ED1D227250DF00769225 /* ViewController.swift */,
-				F647ED1F227250DF00769225 /* Main.storyboard */,
+				F647ED542272541900769225 /* Components */,
+				F647ED4E227253CC00769225 /* Model */,
+				F647ED6D227257A000769225 /* Base */,
 				F647ED22227250E000769225 /* Assets.xcassets */,
 				F647ED24227250E000769225 /* LaunchScreen.storyboard */,
 				F647ED27227250E000769225 /* Info.plist */,
@@ -125,6 +150,111 @@
 			path = MVVMReactiveSwiftUITests;
 			sourceTree = "<group>";
 		};
+		F647ED492272535A00769225 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F647ED4A2272535A00769225 /* ReactiveSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F647ED4E227253CC00769225 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F647ED4F227253D700769225 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F647ED752272589700769225 /* PixelBayService.swift */,
+				F647ED732272583300769225 /* ServiceProtocol.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F647ED542272541900769225 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F647ED562272542400769225 /* ImageDetail */,
+				F647ED552272541F00769225 /* ImageList */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F647ED552272541F00769225 /* ImageList */ = {
+			isa = PBXGroup;
+			children = (
+				F647ED5D2272548A00769225 /* ViewController */,
+				F647ED5E2272549200769225 /* ViewModel */,
+			);
+			path = ImageList;
+			sourceTree = "<group>";
+		};
+		F647ED562272542400769225 /* ImageDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F647ED5B2272547800769225 /* ViewController */,
+				F647ED5C2272547F00769225 /* ViewModel */,
+			);
+			path = ImageDetail;
+			sourceTree = "<group>";
+		};
+		F647ED5B2272547800769225 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F647ED652272559C00769225 /* ImageDetailViewController.swift */,
+				F647ED662272559C00769225 /* ImageDetailViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F647ED5C2272547F00769225 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F647ED61227254DD00769225 /* ImageDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F647ED5D2272548A00769225 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F647ED69227255AE00769225 /* ImageListViewController.swift */,
+				F647ED6A227255AE00769225 /* ImageListViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F647ED5E2272549200769225 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F647ED5F227254C700769225 /* ImageListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F647ED6D227257A000769225 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F647ED6E227257AD00769225 /* UI */,
+				F647ED4F227253D700769225 /* Service */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F647ED6E227257AD00769225 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F647ED772272593800769225 /* ViewController.swift */,
+				F647ED6F227257BD00769225 /* ViewControllerProtocol.swift */,
+				F647ED71227257E300769225 /* ViewControllerContext.swift */,
+				F647ED7922725A5900769225 /* TableViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +265,7 @@
 				F647ED14227250DF00769225 /* Sources */,
 				F647ED15227250DF00769225 /* Frameworks */,
 				F647ED16227250DF00769225 /* Resources */,
+				F647ED4D2272538000769225 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -230,8 +361,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F647ED26227250E000769225 /* LaunchScreen.storyboard in Resources */,
+				F647ED682272559C00769225 /* ImageDetailViewController.xib in Resources */,
+				F647ED6C227255AE00769225 /* ImageListViewController.xib in Resources */,
 				F647ED23227250E000769225 /* Assets.xcassets in Resources */,
-				F647ED21227250DF00769225 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +383,44 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F647ED4D2272538000769225 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F647ED14227250DF00769225 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F647ED1E227250DF00769225 /* ViewController.swift in Sources */,
+				F647ED782272593800769225 /* ViewController.swift in Sources */,
+				F647ED70227257BD00769225 /* ViewControllerProtocol.swift in Sources */,
+				F647ED6B227255AE00769225 /* ImageListViewController.swift in Sources */,
+				F647ED62227254DD00769225 /* ImageDetailViewModel.swift in Sources */,
+				F647ED742272583300769225 /* ServiceProtocol.swift in Sources */,
+				F647ED762272589700769225 /* PixelBayService.swift in Sources */,
+				F647ED7A22725A5900769225 /* TableViewController.swift in Sources */,
+				F647ED72227257E300769225 /* ViewControllerContext.swift in Sources */,
 				F647ED1C227250DF00769225 /* AppDelegate.swift in Sources */,
+				F647ED60227254C700769225 /* ImageListViewModel.swift in Sources */,
+				F647ED672272559C00769225 /* ImageDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +456,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F647ED1F227250DF00769225 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F647ED20227250DF00769225 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F647ED24227250E000769225 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -434,12 +589,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F8866H6R9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MVVMReactiveSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.reactiveswift.MVVMReactiveSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.MVVMReactiveSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -452,12 +611,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7F8866H6R9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MVVMReactiveSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.reactiveswift.MVVMReactiveSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tba.apps.MVVMReactiveSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
