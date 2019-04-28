@@ -25,6 +25,10 @@
 		F647ED762272589700769225 /* PixelBayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED752272589700769225 /* PixelBayService.swift */; };
 		F647ED782272593800769225 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED772272593800769225 /* ViewController.swift */; };
 		F647ED7A22725A5900769225 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED7922725A5900769225 /* TableViewController.swift */; };
+		F647ED7C22725FEC00769225 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED7B22725FEC00769225 /* Image.swift */; };
+		F647ED7E2272606900769225 /* ImageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED7D2272606900769225 /* ImageList.swift */; };
+		F647ED802272687200769225 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F647ED7F2272687200769225 /* PromiseKit.framework */; };
+		F6DC961B22759DAE0086128B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DC961A22759DAE0086128B /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		F647ED752272589700769225 /* PixelBayService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelBayService.swift; sourceTree = "<group>"; };
 		F647ED772272593800769225 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F647ED7922725A5900769225 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		F647ED7B22725FEC00769225 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		F647ED7D2272606900769225 /* ImageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageList.swift; sourceTree = "<group>"; };
+		F647ED7F2272687200769225 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		F6DC961A22759DAE0086128B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F647ED802272687200769225 /* PromiseKit.framework in Frameworks */,
 				F647ED4B2272535A00769225 /* ReactiveSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +162,7 @@
 		F647ED492272535A00769225 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F647ED7F2272687200769225 /* PromiseKit.framework */,
 				F647ED4A2272535A00769225 /* ReactiveSwift.framework */,
 			);
 			name = Frameworks;
@@ -161,6 +171,8 @@
 		F647ED4E227253CC00769225 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F647ED7B22725FEC00769225 /* Image.swift */,
+				F647ED7D2272606900769225 /* ImageList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -240,6 +252,7 @@
 			children = (
 				F647ED6E227257AD00769225 /* UI */,
 				F647ED4F227253D700769225 /* Service */,
+				F6DC961C2275A7E90086128B /* Utils */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -247,12 +260,20 @@
 		F647ED6E227257AD00769225 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F647ED7922725A5900769225 /* TableViewController.swift */,
 				F647ED772272593800769225 /* ViewController.swift */,
 				F647ED6F227257BD00769225 /* ViewControllerProtocol.swift */,
 				F647ED71227257E300769225 /* ViewControllerContext.swift */,
-				F647ED7922725A5900769225 /* TableViewController.swift */,
+				F6DC961A22759DAE0086128B /* ViewModel.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		F6DC961C2275A7E90086128B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,11 +414,13 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
 			);
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PromiseKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -411,13 +434,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F647ED782272593800769225 /* ViewController.swift in Sources */,
+				F647ED7C22725FEC00769225 /* Image.swift in Sources */,
 				F647ED70227257BD00769225 /* ViewControllerProtocol.swift in Sources */,
 				F647ED6B227255AE00769225 /* ImageListViewController.swift in Sources */,
 				F647ED62227254DD00769225 /* ImageDetailViewModel.swift in Sources */,
 				F647ED742272583300769225 /* ServiceProtocol.swift in Sources */,
+				F6DC961B22759DAE0086128B /* ViewModel.swift in Sources */,
 				F647ED762272589700769225 /* PixelBayService.swift in Sources */,
 				F647ED7A22725A5900769225 /* TableViewController.swift in Sources */,
 				F647ED72227257E300769225 /* ViewControllerContext.swift in Sources */,
+				F647ED7E2272606900769225 /* ImageList.swift in Sources */,
 				F647ED1C227250DF00769225 /* AppDelegate.swift in Sources */,
 				F647ED60227254C700769225 /* ImageListViewModel.swift in Sources */,
 				F647ED672272559C00769225 /* ImageDetailViewController.swift in Sources */,

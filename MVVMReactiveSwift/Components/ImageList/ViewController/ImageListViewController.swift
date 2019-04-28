@@ -11,11 +11,15 @@ class ImageListViewController: ViewController {
     @IBOutlet weak var searchTermTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
 
+    // MARK: Setup ViewModel
+
+    lazy var viewModel = ImageListViewModel(service: context.pixelBayService)
+
     // MARK: Setup
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        viewModel.fetchImage(searchTerm: "sky")
     }
 }

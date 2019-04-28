@@ -1,9 +1,21 @@
 //
-//  ImageListViewModel.swift
-//  MVVMReactiveSwift
-//
-//  Created by An Tran on 25.04.19.
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
-import Foundation
+class ImageListViewModel: ViewModel {
+
+    func fetchImage(searchTerm: String) {
+        pixelBayService.fetch(searchTerm: searchTerm).done { imageList in
+            print(imageList)
+        }
+        .catch { error in
+            print(error)
+        }
+    }
+}
+
+extension ImageListViewModel {
+    var pixelBayService: PixelBayService {
+        return service as! PixelBayService
+    }
+}
