@@ -7,7 +7,7 @@ import PromiseKit
 class PixelBayService: ServiceProtocol {
 
     func fetch(searchTerm: String) -> Promise<ImageList> {
-        let urlString = "https://pixabay.com/api/?key=107764-f19c20d5ca4d545d9b0a09de3&q=yellow+flowers&image_type=photo&pretty=true"
+        let urlString = "https://pixabay.com/api/?key=107764-f19c20d5ca4d545d9b0a09de3&q=\(searchTerm)&image_type=photo&pretty=true"
         let url = URL(string: urlString)!
 
         return Promise { resolver in
