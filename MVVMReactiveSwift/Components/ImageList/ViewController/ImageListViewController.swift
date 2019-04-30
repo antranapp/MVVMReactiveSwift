@@ -18,7 +18,7 @@ class ImageListViewController: ViewController {
 
     lazy var viewModel = ImageListViewModel(service: context.pixelBayService)
 
-    // MARK: Setup
+    // MARK: Lifecyles
 
     override func viewDidLoad() {
         super.viewDidLoad()

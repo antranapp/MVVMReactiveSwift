@@ -25,7 +25,6 @@ class ImageListViewModel: ViewModel {
     }
 
     func fetchImage(searchTerm: String) {
-        // TODO: make this cancelable or block the ui
         pixelBayService.fetch(searchTerm: searchTerm)
             .done { [weak self] imageList in
                 self?.imageList.value = imageList
