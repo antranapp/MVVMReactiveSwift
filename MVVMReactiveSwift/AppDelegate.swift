@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let imageListViewController = ImageListViewController(context: viewControllerContext)
 
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = imageListViewController
+        window?.rootViewController = UINavigationController(rootViewController: imageListViewController)
         window?.makeKeyAndVisible()
 
         return true

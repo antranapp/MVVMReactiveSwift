@@ -18,7 +18,7 @@ class ImageListViewModel: ViewModel {
         super.init(service: service)
 
         searchTerm.signal.observeValues { [unowned self] value in
-            if value.count > 3 {
+            if value.count > 2 {
                 self.fetchImage(searchTerm: value)
             }
         }
@@ -29,7 +29,7 @@ class ImageListViewModel: ViewModel {
         pixelBayService.fetch(searchTerm: searchTerm)
             .done { [weak self] imageList in
                 self?.imageList.value = imageList
-            }
+                    }
             .catch { error in
                 print(error)
             }

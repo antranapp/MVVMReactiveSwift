@@ -14,7 +14,6 @@
 		F647ED3C227250E000769225 /* MVVMReactiveSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED3B227250E000769225 /* MVVMReactiveSwiftUITests.swift */; };
 		F647ED4B2272535A00769225 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F647ED4A2272535A00769225 /* ReactiveSwift.framework */; };
 		F647ED60227254C700769225 /* ImageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED5F227254C700769225 /* ImageListViewModel.swift */; };
-		F647ED62227254DD00769225 /* ImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED61227254DD00769225 /* ImageDetailViewModel.swift */; };
 		F647ED672272559C00769225 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED652272559C00769225 /* ImageDetailViewController.swift */; };
 		F647ED682272559C00769225 /* ImageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F647ED662272559C00769225 /* ImageDetailViewController.xib */; };
 		F647ED6B227255AE00769225 /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647ED69227255AE00769225 /* ImageListViewController.swift */; };
@@ -65,7 +64,6 @@
 		F647ED3D227250E000769225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F647ED4A2272535A00769225 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		F647ED5F227254C700769225 /* ImageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewModel.swift; sourceTree = "<group>"; };
-		F647ED61227254DD00769225 /* ImageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModel.swift; sourceTree = "<group>"; };
 		F647ED652272559C00769225 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
 		F647ED662272559C00769225 /* ImageDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDetailViewController.xib; sourceTree = "<group>"; };
 		F647ED69227255AE00769225 /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
@@ -216,7 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				F647ED5B2272547800769225 /* ViewController */,
-				F647ED5C2272547F00769225 /* ViewModel */,
 			);
 			path = ImageDetail;
 			sourceTree = "<group>";
@@ -228,14 +225,6 @@
 				F647ED662272559C00769225 /* ImageDetailViewController.xib */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		F647ED5C2272547F00769225 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				F647ED61227254DD00769225 /* ImageDetailViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F647ED5D2272548A00769225 /* ViewController */ = {
@@ -452,7 +441,6 @@
 				F647ED7C22725FEC00769225 /* Image.swift in Sources */,
 				F647ED70227257BD00769225 /* ViewControllerProtocol.swift in Sources */,
 				F647ED6B227255AE00769225 /* ImageListViewController.swift in Sources */,
-				F647ED62227254DD00769225 /* ImageDetailViewModel.swift in Sources */,
 				F647ED742272583300769225 /* ServiceProtocol.swift in Sources */,
 				F6DC961B22759DAE0086128B /* ViewModel.swift in Sources */,
 				F647ED762272589700769225 /* PixelBayService.swift in Sources */,

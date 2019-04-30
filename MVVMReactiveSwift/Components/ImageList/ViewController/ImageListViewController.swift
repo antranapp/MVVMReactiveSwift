@@ -34,7 +34,7 @@ class ImageListViewController: ViewController {
 
         tableView.register(UINib(nibName: "ImageListTableViewCell", bundle: nil), forCellReuseIdentifier: "ImageListTableViewCell")
 
-        viewModel.searchTerm.value = "flower"
+        title = "List"
     }
 }
 
@@ -63,5 +63,11 @@ extension ImageListViewController: UITableViewDelegate {
         cell.previewImageView.kf.setImage(with: url)
 
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let imageItem = viewModel.imageList.value.hits[indexPath.row]
+        let detailViewController = ImageDetailViewController(context: context, image: imageItem)
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
