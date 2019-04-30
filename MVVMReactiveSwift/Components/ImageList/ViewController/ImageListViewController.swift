@@ -4,6 +4,7 @@
 
 import ReactiveSwift
 import ReactiveCocoa
+import Kingfisher
 import UIKit
 
 class ImageListViewController: ViewController {
@@ -30,6 +31,10 @@ class ImageListViewController: ViewController {
         viewModel.imageList.signal.observeValues { [unowned self] _ in
             self.tableView.reloadData()
         }
+
+        tableView.register(UINib(nibName: "ImageListTableViewCell", bundle: nil), forCellReuseIdentifier: "ImageListTableViewCell")
+
+        viewModel.searchTerm.value = "flower"
     }
 }
 
@@ -47,14 +52,15 @@ extension ImageListViewController: UITableViewDataSource {
 extension ImageListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell: UITableViewCell!
-        cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell")
-        if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: "UITableViewCell")
-        }
+        let cell: ImageListTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ImageListTableViewCell") as! ImageListTableViewCell
 
         let imageItem = viewModel.imageList.value.hits[indexPath.row]
-        cell.textLabel?.text = imageItem.previewURL
+        cell.titleLabel?.text = imageItem.previewURL
+        guard let url = URL(string: imageItem.previewURL) else {
+            return cell
+        }
+
+        cell.previewImageView.kf.setImage(with: url)
 
         return cell
     }
