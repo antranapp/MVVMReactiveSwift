@@ -251,7 +251,6 @@
 			children = (
 				F647ED6E227257AD00769225 /* UI */,
 				F647ED4F227253D700769225 /* Service */,
-				F6DC961C2275A7E90086128B /* Utils */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -266,13 +265,6 @@
 				F6DC961A22759DAE0086128B /* ViewModel.swift */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		F6DC961C2275A7E90086128B /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
