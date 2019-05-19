@@ -12,6 +12,9 @@ class ImageListViewModel: ViewModel {
     var searchTerm = MutableProperty("")
     var imageList = MutableProperty(ImageList(total: 0, totalHits: 0, hits: []))
 
+    let activity = Signal<Bool, Never>.pipe()
+
+
     // MARK: APIs
 
     override init(service: ServiceProtocol) {
@@ -25,12 +28,15 @@ class ImageListViewModel: ViewModel {
     }
 
     func fetchImage(searchTerm: String) {
+        activity.input.send(value: true)
         pixelBayService.fetch(searchTerm: searchTerm)
             .done { [weak self] imageList in
                 self?.imageList.value = imageList
-                    }
+            }
             .catch { error in
                 print(error)
+            }.finally {
+                self.activity.input.send(value: false)
             }
     }
 }

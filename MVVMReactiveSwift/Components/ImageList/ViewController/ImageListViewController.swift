@@ -11,8 +11,14 @@ class ImageListViewController: ViewController {
 
     // MARK: Properties
 
+    // Public
+
     @IBOutlet weak var searchTermTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+
+    // Private
+
+    private var activityIndicator: UIActivityIndicatorView!
 
     // MARK: Setup ViewModel
 
@@ -26,10 +32,27 @@ class ImageListViewController: ViewController {
         tableView.dataSource = self
         tableView.delegate = self
 
+        activityIndicator = UIActivityIndicatorView(style: .gray)
+        let rightButton = UIBarButtonItem(customView: activityIndicator)
+        navigationItem.rightBarButtonItem = rightButton
+
+        // UI Binding
         viewModel.searchTerm <~ searchTermTextField.reactive.continuousTextValues
 
+        // Observe Property
         viewModel.imageList.signal.observeValues { [unowned self] _ in
             self.tableView.reloadData()
+        }
+
+        // Observe Signal
+        viewModel.activity.output.observe { [unowned self] event in
+            guard let value = event.value else {
+                return
+            }
+
+            DispatchQueue.main.async {
+                value ? self.activityIndicator.startAnimating() : self.activityIndicator.stopAnimating()
+            }
         }
 
         tableView.register(UINib(nibName: "ImageListTableViewCell", bundle: nil), forCellReuseIdentifier: "ImageListTableViewCell")
