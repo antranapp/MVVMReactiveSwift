@@ -14,7 +14,6 @@ class ImageListViewModel: ViewModel {
 
     let activity = Signal<Bool, Never>.pipe()
 
-
     // MARK: APIs
 
     override init(service: ServiceProtocol) {
