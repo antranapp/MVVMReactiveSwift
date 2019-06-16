@@ -22,7 +22,6 @@ class PixelBayService: ServiceProtocol {
                     return
                 }
 
-
                 do {
                     let decoder = JSONDecoder()
                     let imageData = try decoder.decode(ImageList.self, from: data)

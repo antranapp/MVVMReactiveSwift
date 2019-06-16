@@ -1,8 +1,4 @@
 //
-//  ImageListTableViewCell.swift
-//  MVVMReactiveSwift
-//
-//  Created by An Tran on 30.04.19.
 //  Copyright © 2019 An Tran. All rights reserved.
 //
 
